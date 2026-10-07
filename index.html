@@ -10,9 +10,8 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Gray-100 */
+            background-color: #f3f4f6;
         }
-        /* Custom scrollbar for table */
         .custom-scrollbar::-webkit-scrollbar {
             height: 6px;
         }
@@ -40,13 +39,12 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4">
-                    <div class="text-sm hidden sm:block">
+                    <div class="text-sm hidden sm:block text-right">
                         <p class="font-medium">Gilbert S. Aniel</p>
                         <p class="text-blue-200 text-xs">Standard Member</p>
                     </div>
-                    <div class="h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center border-2 border-white cursor-pointer">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                    <!-- Pinalitan ang icon ng ID/Profile Picture -->
+                    <img src="eve.jpg" alt="Borrower ID Picture" class="h-10 w-10 rounded-full border-2 border-white cursor-pointer object-cover shadow-sm">
                 </div>
             </div>
         </div>
@@ -55,18 +53,44 @@
     <!-- Main Content -->
     <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <!-- Credit Limit Card -->
+        <!-- Credit Summary Section with 4 Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <!-- Total Limit -->
             <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 flex items-center justify-between transition hover:shadow-md">
                 <div>
-                    <p class="text-sm text-gray-500 font-medium mb-1">Available Credit Limit</p>
-                    <h2 class="text-3xl font-bold text-gray-800">₱20,000.00</h2>
-                    <p class="text-xs text-green-600 mt-2 flex items-center gap-1">
-                        <i class="fa-solid fa-circle-check"></i> Good standing
+                    <p class="text-sm text-gray-500 font-medium mb-1">Total Limit</p>
+                    <h2 class="text-2xl font-bold text-gray-800">₱20,000</h2>
+                </div>
+                <div class="h-12 w-12 rounded-full bg-gray-50 flex items-center justify-center text-gray-600">
+                    <i class="fa-solid fa-credit-card text-xl"></i>
+                </div>
+            </div>
+
+            <!-- Current Loan -->
+            <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 flex items-center justify-between transition hover:shadow-md">
+                <div>
+                    <p class="text-sm text-gray-500 font-medium mb-1">Current Loan</p>
+                    <h2 class="text-2xl font-bold text-red-600">₱5,000</h2>
+                    <p class="text-xs text-red-500 mt-2 flex items-center gap-1">
+                        Active Balance
                     </p>
                 </div>
-                <div class="h-14 w-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                    <i class="fa-solid fa-credit-card text-2xl"></i>
+                <div class="h-12 w-12 rounded-full bg-red-50 flex items-center justify-center text-red-600">
+                    <i class="fa-solid fa-file-invoice-dollar text-xl"></i>
+                </div>
+            </div>
+
+            <!-- Available Credit -->
+            <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 flex items-center justify-between transition hover:shadow-md border-l-4 border-l-green-500">
+                <div>
+                    <p class="text-sm text-gray-500 font-medium mb-1">Available Credit</p>
+                    <h2 class="text-2xl font-bold text-green-600">₱15,000</h2>
+                    <p class="text-xs text-green-600 mt-2 flex items-center gap-1">
+                        <i class="fa-solid fa-circle-check"></i> Ready to borrow
+                    </p>
+                </div>
+                <div class="h-12 w-12 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                    <i class="fa-solid fa-wallet text-xl"></i>
                 </div>
             </div>
 
@@ -75,15 +99,15 @@
                 <div>
                     <p class="text-sm text-gray-500 font-medium mb-1">Credit Score</p>
                     <div class="flex items-baseline gap-2">
-                        <h2 class="text-3xl font-bold text-gray-800">800</h2>
+                        <h2 class="text-2xl font-bold text-gray-800">800</h2>
                         <span class="text-sm font-medium text-green-500">Excellent</span>
                     </div>
                     <p class="text-xs text-gray-400 mt-2">Last updated today</p>
                 </div>
-                <div class="relative h-14 w-14">
+                <div class="relative h-12 w-12">
                     <svg class="w-full h-full transform -rotate-90">
-                        <circle cx="28" cy="28" r="24" stroke="currentColor" stroke-width="4" fill="transparent" class="text-gray-200"></circle>
-                        <circle cx="28" cy="28" r="24" stroke="currentColor" stroke-width="4" fill="transparent" stroke-dasharray="150" stroke-dashoffset="30" class="text-green-500"></circle>
+                        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="4" fill="transparent" class="text-gray-200"></circle>
+                        <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="4" fill="transparent" stroke-dasharray="125" stroke-dashoffset="25" class="text-green-500"></circle>
                     </svg>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
@@ -100,7 +124,7 @@
                     <h3 class="text-lg font-bold text-white flex items-center gap-2">
                         <i class="fa-solid fa-calculator"></i> Loan Calculator
                     </h3>
-                    <p class="text-blue-100 text-xs mt-1">Calculate your loan (4% Monthly Interest)</p>
+                    <p class="text-blue-100 text-xs mt-1">Calculate your loan (5% Interest)</p>
                 </div>
                 
                 <div class="p-6">
@@ -111,33 +135,36 @@
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <span class="text-gray-500 font-medium">₱</span>
                                 </div>
-                                <input type="number" id="loanAmount" min="500" max="20000" step="100" class="pl-8 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Example: 5000">
+                                <input type="number" id="loanAmount" min="500" max="15000" step="100" class="pl-8 w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Example: 5000">
                             </div>
-                            <p class="text-xs text-gray-500 mt-1">Max: ₱20,000 based on your limit</p>
+                            <p class="text-xs text-gray-500 mt-1">Max: ₱15,000 based on Available Credit</p>
                         </div>
 
                         <div>
-                            <label for="loanTerm" class="block text-sm font-medium text-gray-700 mb-1">Loan Term</label>
+                            <label for="termType" class="block text-sm font-medium text-gray-700 mb-1">Payment Frequency</label>
+                            <select id="termType" class="w-full rounded-lg border border-gray-300 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="biweekly">Bi-weekly</option>
+                                <option value="monthly" selected>Monthly</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="loanTerm" class="block text-sm font-medium text-gray-700 mb-1">Number of Terms</label>
                             <div class="relative">
-                                <input type="number" id="loanTerm" min="1" max="24" class="w-full rounded-lg border border-gray-300 px-4 py-2.5 pr-16 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Example: 6">
+                                <input type="number" id="loanTerm" min="1" class="w-full rounded-lg border border-gray-300 px-4 py-2.5 pr-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Example: 6">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                                    <span class="text-gray-500 text-sm">Months</span>
+                                    <span id="termLabel" class="text-gray-500 text-sm">Months</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Results Area -->
                         <div class="bg-gray-50 rounded-xl p-4 mt-6 border border-gray-100">
-                            
-                            <!-- Removed the breakdown, keeping only the Total Amount to Pay -->
-                            <div class="border-b border-gray-200 pb-4 mb-4 flex justify-between items-center">
-                                <span class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Total Amount to Pay:</span>
-                                <span id="resTotal" class="font-bold text-lg text-gray-900">₱0.00</span>
-                            </div>
-
                             <div class="bg-blue-50 rounded-lg p-3 border border-blue-100">
-                                <span class="block text-xs text-blue-600 font-medium mb-1">Monthly Amortization</span>
-                                <span id="resMonthly" class="block text-2xl font-bold text-blue-700">₱0.00</span>
+                                <span id="amortLabel" class="block text-xs text-blue-600 font-medium mb-1">Monthly Amortization</span>
+                                <span id="resAmort" class="block text-2xl font-bold text-blue-700">₱0.00</span>
                             </div>
                         </div>
                     </form>
@@ -164,8 +191,7 @@
                                 <th class="py-3 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-50 text-sm">
-                            <!-- Mock Data Row 1 -->
+                        <!--<tbody class="divide-y divide-gray-50 text-sm">
                             <tr class="hover:bg-gray-50 transition">
                                 <td class="py-3 px-4 text-gray-600">Oct 05, 2026</td>
                                 <td class="py-3 px-4">
@@ -180,7 +206,6 @@
                                     </span>
                                 </td>
                             </tr>
-                            <!-- Mock Data Row 2 -->
                             <tr class="hover:bg-gray-50 transition">
                                 <td class="py-3 px-4 text-gray-600">Sep 05, 2026</td>
                                 <td class="py-3 px-4">
@@ -195,52 +220,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            <!-- Mock Data Row 3 -->
-                            <tr class="hover:bg-gray-50 transition">
-                                <td class="py-3 px-4 text-gray-600">Aug 05, 2026</td>
-                                <td class="py-3 px-4">
-                                    <p class="font-medium text-gray-800">Monthly Amortization</p>
-                                    <p class="text-xs text-gray-400">Loan Ref: #LN-8821</p>
-                                </td>
-                                <td class="py-3 px-4 font-medium text-gray-800">₱1,250.00</td>
-                                <td class="py-3 px-4">
-                                    <span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-green-100 text-green-700 border border-green-200">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
-                                        Paid
-                                    </span>
-                                </td>
-                            </tr>
-                            <!-- Mock Data Row 4 -->
-                            <tr class="hover:bg-gray-50 transition">
-                                <td class="py-3 px-4 text-gray-600">Nov 05, 2026</td>
-                                <td class="py-3 px-4">
-                                    <p class="font-medium text-gray-800">Upcoming Amortization</p>
-                                    <p class="text-xs text-gray-400">Loan Ref: #LN-8821</p>
-                                </td>
-                                <td class="py-3 px-4 font-medium text-gray-800">₱1,250.00</td>
-                                <td class="py-3 px-4">
-                                    <span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 border border-yellow-200">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
-                                        Pending
-                                    </span>
-                                </td>
-                            </tr>
-                            <!-- Mock Data Row 5 -->
-                            <tr class="hover:bg-gray-50 transition">
-                                <td class="py-3 px-4 text-gray-600">Dec 05, 2026</td>
-                                <td class="py-3 px-4">
-                                    <p class="font-medium text-gray-800">Upcoming Amortization</p>
-                                    <p class="text-xs text-gray-400">Loan Ref: #LN-8821</p>
-                                </td>
-                                <td class="py-3 px-4 font-medium text-gray-800">₱1,250.00</td>
-                                <td class="py-3 px-4">
-                                    <span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 border border-yellow-200">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span>
-                                        Pending
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
+                        </tbody>-->
                     </table>
                 </div>
             </div>
@@ -252,11 +232,13 @@
         document.addEventListener('DOMContentLoaded', () => {
             const loanAmountInput = document.getElementById('loanAmount');
             const loanTermInput = document.getElementById('loanTerm');
+            const termTypeSelect = document.getElementById('termType');
             
-            const resTotal = document.getElementById('resTotal');
-            const resMonthly = document.getElementById('resMonthly');
+            const resAmort = document.getElementById('resAmort');
+            const termLabel = document.getElementById('termLabel');
+            const amortLabel = document.getElementById('amortLabel');
 
-            const MONTHLY_INTEREST_RATE = 0.04; // 4% monthly interest
+            const INTEREST_RATE = 0.05; // 5% base rate
 
             // Formatting number to PHP currency
             const formatCurrency = (amount) => {
@@ -270,29 +252,50 @@
             // Calculate Loan Function
             const calculateLoan = () => {
                 const principal = parseFloat(loanAmountInput.value) || 0;
-                const months = parseInt(loanTermInput.value) || 0;
+                const termCount = parseInt(loanTermInput.value) || 0;
+                const termType = termTypeSelect.value;
+                
+                if (termType === 'daily') {
+                    termLabel.textContent = 'Days';
+                    amortLabel.textContent = 'Daily Amortization';
+                } else if (termType === 'weekly') {
+                    termLabel.textContent = 'Weeks';
+                    amortLabel.textContent = 'Weekly Amortization';
+                } else if (termType === 'biweekly') {
+                    termLabel.textContent = 'Bi-weeks';
+                    amortLabel.textContent = 'Bi-weekly Amortization';
+                } else {
+                    termLabel.textContent = 'Months';
+                    amortLabel.textContent = 'Monthly Amortization';
+                }
 
-                if (principal > 0 && months > 0) {
-                    // Total Interest = Principal * rate * months
-                    const totalInterest = principal * MONTHLY_INTEREST_RATE * months;
+                if (principal > 0 && termCount > 0) {
+                    // Convert chosen term duration into equivalent months for 5% monthly interest calculation
+                    let monthsEquivalent = 0;
+                    if (termType === 'daily') monthsEquivalent = termCount / 30;
+                    else if (termType === 'weekly') monthsEquivalent = termCount / 4;
+                    else if (termType === 'biweekly') monthsEquivalent = termCount / 2;
+                    else if (termType === 'monthly') monthsEquivalent = termCount;
+
+                    // Total Interest = Principal * rate * months equivalent
+                    const totalInterest = principal * INTEREST_RATE * monthsEquivalent;
                     // Total Payment = Principal + Total Interest
                     const totalPayment = principal + totalInterest;
-                    // Monthly Amortization = Total Payment / months
-                    const monthlyAmortization = totalPayment / months;
+                    // Amortization per term
+                    const amortization = totalPayment / termCount;
 
                     // Update UI
-                    resTotal.textContent = formatCurrency(totalPayment);
-                    resMonthly.textContent = formatCurrency(monthlyAmortization);
+                    resAmort.textContent = formatCurrency(amortization);
                 } else {
                     // Reset UI if inputs are empty or invalid
-                    resTotal.textContent = '₱0.00';
-                    resMonthly.textContent = '₱0.00';
+                    resAmort.textContent = '₱0.00';
                 }
             };
 
             // Add Event Listeners for real-time calculation
             loanAmountInput.addEventListener('input', calculateLoan);
             loanTermInput.addEventListener('input', calculateLoan);
+            termTypeSelect.addEventListener('change', calculateLoan);
         });
     </script>
 </body>
